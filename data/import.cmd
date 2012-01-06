@@ -1,0 +1,1 @@
+mysqlimport -u root -p --fields-terminated-by="," --fields-enclosed-by=\" --fields-escaped-by="\\" --local graphs /tmp/scrum_surveyresponse.csv
