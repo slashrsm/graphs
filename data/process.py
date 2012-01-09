@@ -8,7 +8,7 @@ bucket = []
 i = 0
 for row in results:
   i += 1
-  if i < 3:
+  if i < 3 or row[2] == '':
     continue
     
   # Parse date
@@ -20,6 +20,11 @@ for row in results:
   # Translate string
   if row[4] == 'več kot 5':
     row[4] = 'more than 5'
+    
+  # Translate string
+  if row[2] == 'Član razvojne ekipe':
+    row[2] = 'Developer'
+
   bucket.append(row)
 
 #print bucket
